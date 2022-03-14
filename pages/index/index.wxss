@@ -1,10 +1,10 @@
 .container{
+  position: relative;
   background-color: #011627;
   width: 750rpx;
   height: 100vh;
 }
 .love_words{
-  position: relative;
   width: 500rpx;
   min-height:700rpx;
   border-top: 2rpx solid #ddd;
@@ -16,9 +16,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform-style:preserve-3d;
-  transform:perspective(1000px) rotate3d(-10deg,-10deg);
   color: #FF9F1C;
+  animation:shake 2s ease-in-out infinite ;
+  overflow: hidden;
+}
+.animation_paused{
+  animation-play-state:paused;
 }
 .postion{
   position: absolute;
@@ -27,9 +30,43 @@
   height: 50px;
   border-radius: 50%;
   border:2px solid rgba(256, 256, 256, 0.8); 
+  transform: translateX(-50%) translateY(-50%);
+  
+}
+.zoom{
+  animation: zoom 5s forwards;
 }
 @keyframes shake{
   0%{
-    transform:rotate3d(-10deg,-10deg);
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(-5px);
+  }
+}
+@keyframes zoom{
+  0%{
+    width: 20rpx;
+    height: 20rpx;
+  }
+  30%{
+    width: 200rpx;
+    height: 200rpx;
+  }
+  50%{
+    width: 380rpx;
+    height: 380rpx;
+  }
+  80%{
+    width: 1000rpx;
+    height: 1000rpx;
+  }
+  100%{
+    width: 2000rpx;
+    height: 2000rpx;
+    opacity: 0;
   }
 }
