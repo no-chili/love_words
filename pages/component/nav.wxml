@@ -1,0 +1,5 @@
+<!--pages/component/nav.wxml-->
+<view class="nav_bar">
+    <li></li>
+    <li></li>
+</view>

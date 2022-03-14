@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="love_words">
+       <view>no-chili</view>
+       <view class="postion"></view>
+    </view>
+</view>
