@@ -1,6 +1,11 @@
-<view bindtap="onTap" class="container">
-    <view  class="love_words">
-       <view>no-chili</view>
-       <view class="postion {zoom:animate}" style="top: {{top}}px;left: {{left}}px;" ></view>
+
+<view class="container">
+    <view class="over">
+        <view bindtap="onTap" class="love_words">
+            <view class="words {{opacity}}">{{cur_worlds}}</view>
+            <view class="postion {{zoom}}" style="top: {{top}}px;left: {{left}}px;" ></view>
+        </view>
+        <view bindtap="wanner" class="before">想说</view>
+        <view bindtap="copy" class="after">复制</view>
     </view>
 </view>

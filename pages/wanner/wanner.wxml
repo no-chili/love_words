@@ -1,0 +1,4 @@
+<view class="container">
+    <textarea model:value="{{content}}" class="content" cols="30" rows="10"></textarea>
+    <button bindtap="send"> 发 送 </button>
+</view>

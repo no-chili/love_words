@@ -1,0 +1,19 @@
+
+.container{
+    position: relative;
+    background-color: #cd5511;
+    width: 750rpx;
+    height: 100vh;
+}
+
+.content{
+    box-sizing: border-box;
+    width: 500rpx;
+    height: 60vh;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 15rpx;
+    font-size: large;
+    font-weight: 800;
+    background-color: #fff;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "love_words",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no-chili/love_words.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no-chili/love_words/issues"
+  },
+  "homepage": "https://github.com/no-chili/love_words#readme",
+  "dependencies": {
+  }
+}

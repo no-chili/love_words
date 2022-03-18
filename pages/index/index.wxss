@@ -1,24 +1,59 @@
 .container{
   position: relative;
-  background-color: #011627;
+  background: linear-gradient(to bottom,#cd5511, #ff5e00); 
   width: 750rpx;
   height: 100vh;
 }
 .love_words{
-  width: 500rpx;
+  position: relative;
+  min-width: 500rpx;
   min-height:700rpx;
-  border-top: 2rpx solid #ddd;
-  border-left: 2rpx solid #ddd;
-  box-shadow: 15rpx 15rpx 15rpx #000;
-  border-radius: 15rpx;
+  width: 80vw;
+  height: 100%;
+  background-color:#fff;
+  box-shadow: 5rpx 5rpx 25rpx rgb(12, 12, 12);
   font-size: large;
   font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #FF9F1C;
-  animation:shake 2s ease-in-out infinite ;
   overflow: hidden;
+}
+.over{
+  position: relative;
+  height: 100%;
+  animation:shake 2s ease-in-out infinite ;
+}
+.before{
+  position:absolute;
+  bottom: 0;
+  bottom:-10rpx;
+  left: -20rpx;
+  width: 50%;
+  background-color: #123;
+  height:150rpx;
+  z-index:999;
+  font-size: large;
+  font-weight: 800;
+  text-align: center;
+  line-height: 150rpx;
+  color: #fff;
+}
+.after{
+  position:absolute;
+  bottom: 0;
+  z-index: 99;
+  bottom:-10rpx;
+  right: -20rpx;
+  width: 70%;
+  background-color: rgb(34, 64, 94);
+  height:150rpx;
+  font-size: large;
+  font-weight: 800;
+  text-align: center;
+  line-height: 150rpx;
+  color: #000;
 }
 .animation_paused{
   animation-play-state:paused;
@@ -29,12 +64,49 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border:2px solid rgba(256, 256, 256, 0.8); 
   transform: translateX(-50%) translateY(-50%);
-  
+}
+.words{
+  padding: 50rpx;
+  transition: all 1s;
+  z-index: 9999;
+}
+.top{
+  position: absolute;
+  top: 5vh;
+  height: 5vh;
+  font-size:large;
+  font-weight: 800;
+  width: 100rpx;
+  text-align: center;
+  padding:15rpx;
+  border-radius: 20rpx;
+  color: #fff;
+}
+.bottom{
+  position: absolute;
+  bottom: 5vh;
+  height: 5vh;
+  font-size:large;
+  font-weight: 800;
+  width: 100rpx;
+  text-align: center;
+  padding:15rpx;
+  border-radius: 20rpx;
+  color: #fff;
+}
+.tapbutton{
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  background-color: rgb(82, 37, 37);
+  width: 300rpx;
 }
 .zoom{
   animation: zoom 5s forwards;
+}
+.opacity{
+  animation: opacity 3s forwards;
 }
 @keyframes shake{
   0%{
@@ -49,24 +121,24 @@
 }
 @keyframes zoom{
   0%{
-    width: 20rpx;
-    height: 20rpx;
+    border:5px solid rgba(225, 228, 27, 0.8); 
+    width: 0rpx;
+    height: 0rpx;
   }
-  30%{
-    width: 200rpx;
-    height: 200rpx;
-  }
-  50%{
-    width: 380rpx;
-    height: 380rpx;
-  }
-  80%{
-    width: 1000rpx;
-    height: 1000rpx;
-  }
+
   100%{
+    border:2px solid rgba(34, 75, 109, 0.8); 
     width: 2000rpx;
     height: 2000rpx;
     opacity: 0;
+  }
+}
+@keyframes opacity{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
   }
 }
